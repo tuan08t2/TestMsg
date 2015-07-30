@@ -1,6 +1,6 @@
 package message.app.com.emo.fragments;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -27,7 +27,7 @@ public class EmojiconFragment extends Fragment {
     public void init() {
         ArrayList<Item> items = new ArrayList<>();
         items.add(new Item(0, "", R.drawable.beaten));
-        items.add(new Item(0, "", R.drawable.bg_img));
+        items.add(new Item(0, "", R.drawable.faill));
         items.add(new Item(0, "", R.drawable.bouaaaaah));
         items.add(new Item(0, "", R.drawable.brzzzzz));
         items.add(new Item(0, "", R.drawable.burnt));
