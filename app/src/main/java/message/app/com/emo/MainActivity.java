@@ -2,7 +2,6 @@ package message.app.com.emo;
 
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -36,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
 
     @Click(R.id.img_first)
     public void increaseVpHeight() {
-        mVp.setVisibility(mVp.getVisibility() == View.GONE? View.VISIBLE : View.GONE);
+
     }
 
 }
