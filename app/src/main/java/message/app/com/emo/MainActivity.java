@@ -1,4 +1,4 @@
-package message.app.com.messageemo;
+package message.app.com.emo;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
