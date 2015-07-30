@@ -1,4 +1,4 @@
-package message.app.com.messageemo;
+package message.app.com.emo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

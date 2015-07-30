@@ -1,38 +1,42 @@
 package message.app.com.emo;
 
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
+@EActivity(R.layout.activity_main)
 public class MainActivity extends ActionBarActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    @ViewById(R.id.vp)
+    protected ViewPager mVp;
+
+    @ViewById(R.id.img_first)
+    protected ImageView mImgFirst;
+
+    @ViewById(R.id.img_second)
+    protected ImageView mImgSecond;
+
+    @ViewById(R.id.img_result)
+    protected ImageView mImgResult;
+
+    @ViewById(R.id.ll_chat_content)
+    protected LinearLayout mLlChatContent;
+
+    @AfterViews
+    public void init() {
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    @Click(R.id.img_first)
+    public void increaseVpHeight() {
+        mVp.setVisibility(mVp.getVisibility() == View.GONE? View.VISIBLE : View.GONE);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
